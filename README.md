@@ -34,6 +34,21 @@ Prediction engine: Monte Carlo simulation, 10,000 iterations, full 128-player dr
 Most unlucky: Casper Ruud (-52.7%) — drawing Hubert Hurkacz in Round 1
 Luckiest: Alexander Bublik (+12.6%) — drawing Thanasi Kokkinakis
 
+## Quarterfinal Deep-Dive
+
+Once the real 2026 draw was known, a narrower follow-up analysis (`quarterfinals/`)
+switched from the pre-tournament hybrid model to pure real Grass Elo — the single
+strongest validated predictor from this project's own Section 10 correlation
+analysis — plus real in-tournament serve stats for the 8 confirmed quarterfinalists.
+
+- **Win probability**: one formula, `P(A beats B) = 1 / (1 + 10^-(EloA-EloB)/400)`
+- **Scoreline breakdowns**: derived from that same probability via the standard best-of-5 formula
+- **Monte Carlo**: 1,000,000 vectorized simulations of the real bracket
+- **Most likely final**: Sinner vs Zverev (31.8%)
+
+See [`quarterfinals/wimbledon_qf_analysis.py`](quarterfinals/wimbledon_qf_analysis.py)
+and the [LinkedIn carousel](quarterfinals/Wimbledon_2026_QF_Carousel.pdf).
+
 
 ## Repository Structure
 
