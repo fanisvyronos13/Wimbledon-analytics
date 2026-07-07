@@ -47,7 +47,7 @@ analysis — plus real in-tournament serve stats for the 8 confirmed quarterfina
 - **Most likely final**: Sinner vs Zverev (31.8%)
 
 See [`quarterfinals/wimbledon_qf_analysis.py`](quarterfinals/wimbledon_qf_analysis.py)
-and the [LinkedIn carousel](quarterfinals/Wimbledon_2026_QF_Carousel.pdf).
+and the [LinkedIn carousel](Wimbledon_2026_QF_Carousel.pdf).
 
 
 ## Repository Structure
